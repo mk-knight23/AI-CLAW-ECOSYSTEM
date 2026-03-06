@@ -14,7 +14,7 @@ This repository serves as the **Ecosystem Portal Hub**, the central gateway to a
 
 - **Status**: [MAINHEAD / GENESIS]
 - **Specialty**: 60-Repo Matrix Orchestration, A2UI Canvas experimental hooks.
-- **[Explore OpenClaw Showcase](AI-Agent-OpenClaw/index.html)**
+- **[Explore OpenClaw Showcase](https://mk-knight23.github.io/AI-Agent-OpenClaw/)**
 
 ---
 
@@ -22,10 +22,10 @@ This repository serves as the **Ecosystem Portal Hub**, the central gateway to a
 
 | Agent | Evolution | Specialty | Discovery |
 | :--- | :--- | :--- | :--- |
-| **Nanobot** | EVO-01 | Lean Research | [View Showcase](AI-Agent-Nanobot/index.html) |
-| **NanoClaw** | EVO-02 | Swarm Collective | [View Showcase](AI-Agent-NanoClaw/index.html) |
-| **PicoClaw** | EVO-03 | Edge Runtime | [View Showcase](AI-Agent-PicoClaw/index.html) |
-| **ZeroClaw** | EVO-04 | Performance Daemon | [View Showcase](AI-Agent-ZeroClaw/index.html) |
+| **Nanobot** | EVO-01 | Lean Research | [View Showcase](https://mk-knight23.github.io/AI-Agent-Nanobot/) |
+| **NanoClaw** | EVO-02 | Swarm Collective | [View Showcase](https://mk-knight23.github.io/AI-Agent-NanoClaw/) |
+| **PicoClaw** | EVO-03 | Edge Runtime | [View Showcase](https://mk-knight23.github.io/AI-Agent-PicoClaw/) |
+| **ZeroClaw** | EVO-04 | Performance Daemon | [View Showcase](https://mk-knight23.github.io/AI-Agent-ZeroClaw/) |
 
 ---
 
@@ -38,7 +38,7 @@ Open `index.html` in the root directory to enter the **Genesis Portal**, an inte
 This ecosystem is optimized for GitHub Pages. Simply:
 1. Push this repository to GitHub.
 2. Enable **Settings > Pages > Deploy from branch (main)**.
-3. Access your ecosystem at `your-username.github.io/claw-ecosystem/`.
+3. Access your ecosystem at `mk-knight23.github.io/AI-CLAW-ECOSYSTEM/`.
 
 ---
 
@@ -51,9 +51,9 @@ This ecosystem is optimized for GitHub Pages. Simply:
 ---
 
 ## 🔗 Ecosystem Links
-- **Portal**: [Interactive Portal](index.html)
-- **Methodology**: [RALPH Protocol](AI-Agent-OpenClaw/docs/RALPH_V2.md)
-- **Security**: [AIEOS Standard](AI-Agent-ZeroClaw/specs/AIEOS_IDENTITY.md)
+- **Portal**: [Interactive Portal](https://mk-knight23.github.io/AI-CLAW-ECOSYSTEM/)
+- **Methodology**: [RALPH Protocol](https://mk-knight23.github.io/AI-Agent-OpenClaw/docs/RALPH_V2.md)
+- **Security**: [AIEOS Standard](https://mk-knight23.github.io/AI-Agent-ZeroClaw/specs/AIEOS_IDENTITY.md)
 
 ---
 *Authorized by MK-KNIGHT23 • Ecosystem Speciation V2.2*
