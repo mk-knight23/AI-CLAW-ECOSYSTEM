@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claw Intelligence Ecosystem | Genesis & Evolutions</title>
+    <meta name="description"
+        content="The OpenClaw Genesis. A timeline of autonomous evolution and specialized intelligence forks.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-primary: #020617;
+            --bg-secondary: #0f172a;
+            --accent: #38bdf8;
+            --progenitor: #60a5fa;
+            /* OpenClaw Blue */
+            --text-primary: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: rgba(255, 255, 255, 0.05);
+            --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* UI-UX Pro Max: Global Resets */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 4rem;
+            position: relative;
+        }
+
+        /* Lineage SVG Background */
+        .lineage-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.15;
+        }
+
+        .lineage-path {
+            fill: none;
+            stroke: var(--progenitor);
+            stroke-width: 2;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: drawPath 3s forwards ease-out;
+        }
+
+        @keyframes drawPath {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        /* Premium Hero */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1.25rem;
+            background: rgba(96, 165, 250, 0.1);
+            border: 1px solid var(--progenitor);
+            border-radius: 99px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: var(--progenitor);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+
+        .main-title {
+            font-size: clamp(4rem, 10vw, 12rem);
+            font-weight: 800;
+            line-height: 0.9;
+            margin-bottom: 4rem;
+        }
+
+        .main-title span {
+            color: var(--progenitor);
+        }
+
+        /* Genesis Card (OpenClaw) */
+        .genesis-section {
+            padding: 10rem 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .genesis-card {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, #000 100%);
+            border: 2px solid var(--progenitor);
+            border-radius: 32px;
+            padding: 5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            box-shadow: 0 0 100px rgba(96, 165, 250, 0.1);
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        .genesis-card:hover {
+            transform: scale(1.01);
+            box-shadow: 0 0 120px rgba(96, 165, 250, 0.2);
+        }
+
+        .gen-status {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--progenitor);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Evolution Grid */
+        .evolutions-section {
+            padding: 10rem 0;
+            z-index: 10;
+            position: relative;
+        }
+
+        .evo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .evo-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 3.5rem;
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .evo-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-10px);
+        }
+
+        .evo-card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            background: var(--accent);
+            opacity: 0.05;
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+        }
+
+        .icon-svg {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            width: 32px;
+            height: 32px;
+            margin-bottom: 2rem;
+        }
+
+        /* Interactive Timeline */
+        .timeline {
+            margin-top: 10rem;
+            border-left: 1px dashed var(--progenitor);
+            padding-left: 4rem;
+        }
+
+        .time-event {
+            margin-bottom: 5rem;
+            position: relative;
+        }
+
+        .time-event::before {
+            content: "";
+            position: absolute;
+            left: -4.35rem;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background: var(--progenitor);
+            border-radius: 50%;
+            box-shadow: 0 0 15px var(--progenitor);
+        }
+
+        /* UI-UX Pro Max: System Pulse */
+        .pulse {
+            width: 12px;
+            height: 12px;
+            background: var(--progenitor);
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 1rem;
+            animation: pulse-ring 2s infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(0.8);
+                box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.7);
+            }
+
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 15px rgba(96, 165, 250, 0);
+            }
+
+            100% {
+                transform: scale(0.8);
+                box-shadow: 0 0 0 0 rgba(96, 165, 250, 0);
+            }
+        }
+
+        [data-reveal] {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: var(--transition);
+        }
+
+        [data-reveal].active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        footer {
+            padding: 6rem 0;
+            border-top: 1px solid var(--border);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+
+<body>
+
+    <svg class="lineage-svg" viewBox="0 0 1440 3000">
+        <!-- Genesis to Evolutions -->
+        <path class="lineage-path" d="M720,800 C720,1000 360,1000 360,1200" />
+        <path class="lineage-path" d="M720,800 C720,1000 1080,1000 1080,1200" />
+        <path class="lineage-path" d="M720,2000 C720,2200 360,2200 360,2400" />
+        <path class="lineage-path" d="M720,2000 C720,2200 1080,2200 1080,2400" />
+    </svg>
+
+    <div class="container">
+        <header>
+            <div class="hero-badge" data-reveal>The Genesis Protocol</div>
+            <h1 class="main-title" data-reveal style="transition-delay: 0.1s">
+                The Origin<br>of <span>Claw.</span>
+            </h1>
+            <p style="font-size: 1.5rem; color: var(--text-muted); max-width: 700px; font-weight: 300;" data-reveal
+                style="transition-delay: 0.2s">
+                What began as a single orchestration node for personal repos has evolved into a multi-species agent
+                ecosystem. Explore the lineage of OpenClaw.
+            </p>
+        </header>
+
+        <section class="genesis-section" id="origin">
+            <h2
+                style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.4em; color: var(--text-muted); margin-bottom: 4rem;">
+                [ 00 // THE PROGENITOR ]</h2>
+            <a href="AI-Agent-OpenClaw/index.html" class="genesis-card" data-reveal>
+                <div>
+                    <span class="gen-status"><span class="pulse"></span> GENESIS NODE ACTIVE</span>
+                    <h3 style="font-size: 4rem; margin-bottom: 1.5rem;">OpenClaw</h3>
+                    <p style="color: var(--text-muted); font-size: 1.25rem;">The original mainhead. A massive,
+                        multi-agent orchestration engine designed to manage 60+ repositories using the RALPH v2
+                        protocol.</p>
+                    <div style="margin-top: 4rem; display: flex; gap: 2rem;">
+                        <div class="stat">
+                            <h4 style="font-size: 0.7rem; color: var(--progenitor);">SPECIATION</h4>
+                            <div style="font-family: 'JetBrains Mono'; font-size: 1.5rem;">GEN-01</div>
+                        </div>
+                        <div class="stat">
+                            <h4 style="font-size: 0.7rem; color: var(--progenitor);">AUTHORITY</h4>
+                            <div style="font-family: 'JetBrains Mono'; font-size: 1.5rem;">ROOT</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    style="background: rgba(255,255,255,0.02); border-radius: 20px; padding: 2rem; border: 1px solid rgba(96, 165, 250, 0.1); font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--text-muted);">
+                    <div style="color: var(--progenitor); margin-bottom: 1rem;">// RALPH_PROTOCOL_CORE</div>
+                    - [R]ecovery_Matrix: Active<br>
+                    - [A]rchitecture_Sync: Validated<br>
+                    - [L]og_Harvesting: Continuous<br>
+                    - [P]erformance_Gating: enabled<br>
+                    - [H]ealth_Verification: Success
+                </div>
+            </a>
+        </section>
+
+        <section class="evolutions-section">
+            <h2
+                style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.4em; color: var(--text-muted); margin-bottom: 4rem;">
+                [ 01 // SPECIALIZED EVOLUTIONS ]</h2>
+            <div class="evo-grid">
+                <!-- Nanobot -->
+                <a href="AI-Agent-Nanobot/index.html" class="evo-card" data-reveal>
+                    <svg class="icon-svg" style="color: #f97316;">
+                        <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" />
+                        <path d="M12 7v10" />
+                        <path d="M8 12h8" />
+                    </svg>
+                    <h3>Nanobot</h3>
+                    <span class="gen-status" style="color: #f97316;">FORK: MINIMALIST_LAB</span>
+                    <p style="color: var(--text-muted); margin-top: 1rem;">A lean Python evolution focused on
+                        per-project depth and modular lab automation. The "Researcher" fork.</p>
+                </a>
+
+                <!-- NanoClaw -->
+                <a href="AI-Agent-NanoClaw/index.html" class="evo-card" data-reveal style="transition-delay: 0.1s">
+                    <svg class="icon-svg" style="color: #a855f7;">
+                        <path d="M12 2v20" />
+                        <path d="m4.93 4.93 14.14 14.14" />
+                        <path d="M2 12h20" />
+                        <path d="m4.93 19.07 14.14-14.14" />
+                    </svg>
+                    <h3>NanoClaw</h3>
+                    <span class="gen-status" style="color: #a855f7;">FORK: SWARM_COLLECTIVE</span>
+                    <p style="color: var(--text-muted); margin-top: 1rem;">A self-modifying evolution that treats agents
+                        as swarms. Optimized for high-concurrency reasoning.</p>
+                </a>
+
+                <!-- PicoClaw -->
+                <a href="AI-Agent-PicoClaw/index.html" class="evo-card" data-reveal style="margin-top: 2rem;">
+                    <svg class="icon-svg" style="color: #10b881;">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                    </svg>
+                    <h3>PicoClaw</h3>
+                    <span class="gen-status" style="color: #10b881;">FORK: EDGE_RUNTIME</span>
+                    <p style="color: var(--text-muted); margin-top: 1rem;">The minimal footprint fork. Designed for
+                        distributed IoT networks and hardware heartbeat monitoring.</p>
+                </a>
+
+                <!-- ZeroClaw -->
+                <a href="AI-Agent-ZeroClaw/index.html" class="evo-card" data-reveal
+                    style="transition-delay: 0.1s; margin-top: 2rem;">
+                    <svg class="icon-svg" style="color: #e11d48;">
+                        <path d="m14.5 2 3.5 3.5L10 13l-3.5-3.5L14.5 2z" />
+                        <path d="m20 12-8.5 8.5L8 17l8.5-8.5L20 12z" />
+                        <path d="m6 16-4 4" />
+                    </svg>
+                    <h3>ZeroClaw</h3>
+                    <span class="gen-status" style="color: #e11d48;">FORK: PERFORMANCE_DAEMON</span>
+                    <p style="color: var(--text-muted); margin-top: 1rem;">The Rust evolution. Built for
+                        mission-critical security, identity rotation, and sub-10ms reliability.</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="timeline">
+            <h2 style="font-size: 3rem; margin-bottom: 6rem;">Interactivity Timeline</h2>
+
+            <div class="time-event" data-reveal>
+                <div class="gen-status">T-MINUS 12 MONTHS</div>
+                <h3>The Genesis: OpenClaw</h3>
+                <p style="color: var(--text-muted);">The initial launch of the Command Center for a 60-project
+                    portfolio.</p>
+            </div>
+
+            <div class="time-event" data-reveal style="transition-delay: 0.1s">
+                <div class="gen-status">T-MINUS 8 MONTHS</div>
+                <h3>The Speciation: Nanobot & ZeroClaw</h3>
+                <p style="color: var(--text-muted);">The first splits into Python (Minimalism) and Rust (Performance)
+                    respectively.</p>
+            </div>
+
+            <div class="time-event" data-reveal style="transition-delay: 0.2s">
+                <div class="gen-status">ACTIVE STATE</div>
+                <h3>The Swarm: NanoClaw</h3>
+                <p style="color: var(--text-muted);">Current high-intelligence collective optimized for the Claude Agent
+                    SDK.</p>
+            </div>
+        </section>
+
+        <footer>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>CLAW ECOSYSTEM • SPECIATION V2.2</div>
+                <div style="display: flex; gap: 3rem;">
+                    <a href="#" style="color:var(--text-muted)">GENESIS</a>
+                    <a href="#" style="color:var(--text-muted)">EVOLUTION</a>
+                    <a href="#" style="color:var(--text-muted)">REASONING</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+
+        // UI-UX Pro Max: Parallax Effect
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            document.querySelectorAll('.evo-card').forEach((card, i) => {
+                const speed = 0.05 + (i * 0.02);
+                card.style.transform = `translateY(${-scroll * speed}px)`;
+            });
+        });
+    </script>
+</body>
+
+</html>
