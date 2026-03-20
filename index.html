@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claw Intelligence Ecosystem | Genesis & Evolutions</title>
+    <title>AI-CLAW-ECOSYSTEM | Genesis Portal</title>
     <meta name="description"
-        content="The OpenClaw Genesis. A timeline of autonomous evolution and specialized intelligence forks.">
+        content="The Ultimate Genesis Portal for the AI-CLAW-ECOSYSTEM. A distributed matrix of specialized autonomous intelligence.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,14 +20,18 @@
             --bg-secondary: #0f172a;
             --accent: #38bdf8;
             --progenitor: #60a5fa;
-            /* OpenClaw Blue */
             --text-primary: #f8fafc;
             --text-muted: #94a3b8;
             --border: rgba(255, 255, 255, 0.05);
-            --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            
+            /* Tech Colors */
+            --tech-node: #6cc24a;
+            --tech-rust: #dea584;
+            --tech-go: #00add8;
+            --tech-python: #3776ab;
         }
 
-        /* UI-UX Pro Max: Global Resets */
         * {
             margin: 0;
             padding: 0;
@@ -41,215 +45,263 @@
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
             scroll-behavior: smooth;
+            line-height: 1.6;
         }
 
         .container {
             max-width: 1440px;
             margin: 0 auto;
-            padding: 0 4rem;
+            padding: 0 2rem;
             position: relative;
         }
 
-        /* Lineage SVG Background */
-        .lineage-svg {
-            position: absolute;
+        /* Ambient Matrix Background */
+        .matrix-bg {
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            pointer-events: none;
-            z-index: 0;
-            opacity: 0.15;
+            background: radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.5) 0%, rgba(2, 6, 23, 1) 100%);
+            z-index: -1;
         }
 
-        .lineage-path {
-            fill: none;
-            stroke: var(--progenitor);
-            stroke-width: 2;
-            stroke-dasharray: 1000;
-            stroke-dashoffset: 1000;
-            animation: drawPath 3s forwards ease-out;
+        .grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+            mask-image: radial-gradient(ellipse at center, black, transparent 80%);
         }
 
-        @keyframes drawPath {
-            to {
-                stroke-dashoffset: 0;
-            }
-        }
-
-        /* Premium Hero */
+        /* Hero Section */
         header {
-            height: 100vh;
+            min-height: 80vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            position: relative;
-            z-index: 10;
+            align-items: flex-start;
+            padding-top: 4rem;
         }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
-            padding: 0.5rem 1.25rem;
-            background: rgba(96, 165, 250, 0.1);
-            border: 1px solid var(--progenitor);
+            padding: 0.5rem 1rem;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.2);
             border-radius: 99px;
-            font-size: 0.7rem;
-            font-weight: 800;
-            color: var(--progenitor);
-            margin-bottom: 2rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent);
             text-transform: uppercase;
             letter-spacing: 0.2em;
+            margin-bottom: 2rem;
         }
 
-        .main-title {
-            font-size: clamp(4rem, 10vw, 12rem);
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 7rem);
             font-weight: 800;
-            line-height: 0.9;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 2rem;
+        }
+
+        .hero-title span {
+            background: linear-gradient(to right, var(--accent), var(--progenitor));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-desc {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
             margin-bottom: 4rem;
         }
 
-        .main-title span {
-            color: var(--progenitor);
+        /* Matrix Grid Section */
+        .matrix-section {
+            padding: 8rem 0;
         }
 
-        /* Genesis Card (OpenClaw) */
-        .genesis-section {
-            padding: 10rem 0;
-            position: relative;
-            z-index: 10;
+        .section-header {
+            margin-bottom: 4rem;
         }
 
-        .genesis-card {
-            background: linear-gradient(135deg, var(--bg-secondary) 0%, #000 100%);
-            border: 2px solid var(--progenitor);
-            border-radius: 32px;
-            padding: 5rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            box-shadow: 0 0 100px rgba(96, 165, 250, 0.1);
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition);
-        }
-
-        .genesis-card:hover {
-            transform: scale(1.01);
-            box-shadow: 0 0 120px rgba(96, 165, 250, 0.2);
-        }
-
-        .gen-status {
+        .section-tag {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
-            color: var(--progenitor);
-            margin-bottom: 1rem;
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
             display: block;
+            margin-bottom: 1rem;
         }
 
-        /* Evolution Grid */
-        .evolutions-section {
-            padding: 10rem 0;
-            z-index: 10;
-            position: relative;
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
         }
 
-        .evo-grid {
+        .matrix-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
         }
 
-        .evo-card {
-            background: var(--bg-secondary);
+        /* Evolution Cards */
+        .matrix-card {
+            background: rgba(15, 23, 42, 0.3);
             border: 1px solid var(--border);
             border-radius: 24px;
-            padding: 3.5rem;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             transition: var(--transition);
             text-decoration: none;
             color: inherit;
-            overflow: hidden;
             position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
         }
 
-        .evo-card:hover {
-            border-color: var(--accent);
+        .matrix-card:hover {
             transform: translateY(-10px);
+            border-color: rgba(56, 189, 248, 0.3);
+            background: rgba(15, 23, 42, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(56, 189, 248, 0.05);
         }
 
-        .evo-card::after {
-            content: "";
+        .matrix-card::before {
+            content: '';
             position: absolute;
             top: 0;
-            right: 0;
-            width: 60px;
-            height: 60px;
-            background: var(--accent);
-            opacity: 0.05;
-            clip-path: polygon(0 0, 100% 0, 100% 100%);
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.1), transparent 70%);
+            opacity: 0;
+            transition: var(--transition);
         }
 
-        .icon-svg {
-            fill: none;
-            stroke: currentColor;
-            stroke-width: 2;
-            width: 32px;
-            height: 32px;
+        .matrix-card:hover::before {
+            opacity: 1;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
             margin-bottom: 2rem;
         }
 
-        /* Interactive Timeline */
-        .timeline {
-            margin-top: 10rem;
-            border-left: 1px dashed var(--progenitor);
-            padding-left: 4rem;
+        .evo-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 99px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            border: 1px solid var(--border);
         }
 
-        .time-event {
-            margin-bottom: 5rem;
-            position: relative;
+        .tech-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            font-weight: 600;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            text-transform: uppercase;
         }
 
-        .time-event::before {
-            content: "";
-            position: absolute;
-            left: -4.35rem;
-            top: 0;
-            width: 10px;
-            height: 10px;
-            background: var(--progenitor);
+        .tech-node { background: rgba(108, 194, 74, 0.1); color: var(--tech-node); border: 1px solid rgba(108, 194, 74, 0.2); }
+        .tech-rust { background: rgba(222, 165, 132, 0.1); color: var(--tech-rust); border: 1px solid rgba(222, 165, 132, 0.2); }
+        .tech-go { background: rgba(0, 173, 216, 0.1); color: var(--tech-go); border: 1px solid rgba(0, 173, 216, 0.2); }
+        .tech-python { background: rgba(55, 118, 171, 0.1); color: var(--tech-python); border: 1px solid rgba(55, 118, 171, 0.2); }
+
+        .card-body h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .card-role {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .card-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        .card-footer {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .use-case {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.85rem;
+            color: var(--text-primary);
+        }
+
+        .use-case-dot {
+            width: 6px;
+            height: 6px;
             border-radius: 50%;
-            box-shadow: 0 0 15px var(--progenitor);
+            background: var(--accent);
         }
 
-        /* UI-UX Pro Max: System Pulse */
+        /* Specialized Root Card (OpenClaw) */
+        .matrix-card.root-node {
+            grid-column: span 1;
+            border-color: rgba(96, 165, 250, 0.3);
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(2, 6, 23, 0.8) 100%);
+        }
+
+        @media (min-width: 1024px) {
+            .matrix-card.root-node {
+                grid-column: span 2;
+            }
+        }
+
+        /* Pulse Animation */
         .pulse {
-            width: 12px;
-            height: 12px;
-            background: var(--progenitor);
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
             border-radius: 50%;
             display: inline-block;
-            margin-right: 1rem;
+            margin-right: 0.5rem;
             animation: pulse-ring 2s infinite;
         }
 
         @keyframes pulse-ring {
-            0% {
-                transform: scale(0.8);
-                box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.7);
-            }
-
-            70% {
-                transform: scale(1);
-                box-shadow: 0 0 0 15px rgba(96, 165, 250, 0);
-            }
-
-            100% {
-                transform: scale(0.8);
-                box-shadow: 0 0 0 0 rgba(96, 165, 250, 0);
-            }
+            0% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(56, 189, 248, 0); }
+            100% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
         }
 
+        /* Animations */
         [data-reveal] {
             opacity: 0;
             transform: translateY(30px);
@@ -261,171 +313,215 @@
             transform: translateY(0);
         }
 
+        /* Footer */
         footer {
-            padding: 6rem 0;
+            padding: 8rem 0 4rem;
             border-top: 1px solid var(--border);
-            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-links a {
             color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .copyright {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            opacity: 0.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 0 1.5rem; }
+            header { min-height: 60vh; padding-top: 2rem; }
+            .matrix-grid { grid-template-columns: 1fr; }
+            .hero-title { font-size: 3.5rem; }
+            .footer-links { flex-direction: column; gap: 1rem; }
         }
     </style>
 </head>
 
 <body>
 
-    <svg class="lineage-svg" viewBox="0 0 1440 3000">
-        <!-- Genesis to Evolutions -->
-        <path class="lineage-path" d="M720,800 C720,1000 360,1000 360,1200" />
-        <path class="lineage-path" d="M720,800 C720,1000 1080,1000 1080,1200" />
-        <path class="lineage-path" d="M720,2000 C720,2200 360,2200 360,2400" />
-        <path class="lineage-path" d="M720,2000 C720,2200 1080,2200 1080,2400" />
-    </svg>
+    <div class="matrix-bg"></div>
+    <div class="grid-overlay"></div>
 
     <div class="container">
         <header>
-            <div class="hero-badge" data-reveal>The Genesis Protocol</div>
-            <h1 class="main-title" data-reveal style="transition-delay: 0.1s">
-                The Origin<br>of <span>Claw.</span>
+            <div class="hero-badge" data-reveal>Distributed Intelligence Matrix</div>
+            <h1 class="hero-title" data-reveal style="transition-delay: 0.1s">
+                The Genesis<br><span>Portal.</span>
             </h1>
-            <p style="font-size: 1.5rem; color: var(--text-muted); max-width: 700px; font-weight: 300;" data-reveal
-                style="transition-delay: 0.2s">
-                What began as a single orchestration node for personal repos has evolved into a multi-species agent
-                ecosystem. Explore the lineage of OpenClaw.
+            <p class="hero-desc" data-reveal style="transition-delay: 0.2s">
+                A multi-species autonomous intelligence ecosystem. From the central orchestration node to specialized edge daemons, explore the lineage of Claw.
             </p>
+            <a href="#matrix" class="hero-badge" data-reveal style="transition-delay: 0.3s; cursor: pointer;">
+                Enter The Matrix ↓
+            </a>
         </header>
 
-        <section class="genesis-section" id="origin">
-            <h2
-                style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.4em; color: var(--text-muted); margin-bottom: 4rem;">
-                [ 00 // THE PROGENITOR ]</h2>
-            <a href="https://mk-knight23.github.io/AI-Agent-OpenClaw/" class="genesis-card" data-reveal>
-                <div>
-                    <span class="gen-status"><span class="pulse"></span> GENESIS NODE ACTIVE</span>
-                    <h3 style="font-size: 4rem; margin-bottom: 1.5rem;">OpenClaw</h3>
-                    <p style="color: var(--text-muted); font-size: 1.25rem;">The original mainhead. A massive,
-                        multi-agent orchestration engine designed to manage 60+ repositories using the RALPH v2
-                        protocol.</p>
-                    <div style="margin-top: 4rem; display: flex; gap: 2rem;">
-                        <div class="stat">
-                            <h4 style="font-size: 0.7rem; color: var(--progenitor);">SPECIATION</h4>
-                            <div style="font-family: 'JetBrains Mono'; font-size: 1.5rem;">GEN-01</div>
+        <section class="matrix-section" id="matrix">
+            <div class="section-header" data-reveal>
+                <span class="section-tag">00 // SPECIATION</span>
+                <h2 class="section-title">The Distributed Matrix</h2>
+            </div>
+
+            <div class="matrix-grid">
+                <!-- OpenClaw (The Root) -->
+                <a href="https://mk-knight23.github.io/AI-Agent-OpenClaw/" class="matrix-card root-node" data-reveal>
+                    <div class="card-header">
+                        <span class="evo-tag"><span class="pulse"></span> GENESIS NODE</span>
+                        <span class="tech-badge tech-node">Node.js</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>OpenClaw</h3>
+                        <span class="card-role">The Orchestration Authority</span>
+                        <p class="card-desc">The foundational mainhead of the ecosystem. Enforces the RALPH v2.2 protocol and coordinates the distributed matrix across 60+ repositories.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="use-case">
+                            <div class="use-case-dot"></div>
+                            <span>Multi-repository fleet orchestration</span>
                         </div>
-                        <div class="stat">
-                            <h4 style="font-size: 0.7rem; color: var(--progenitor);">AUTHORITY</h4>
-                            <div style="font-family: 'JetBrains Mono'; font-size: 1.5rem;">ROOT</div>
+                        <div class="use-case">
+                            <div class="use-case-dot"></div>
+                            <span>Centralized intelligence governance</span>
                         </div>
                     </div>
-                </div>
-                <div
-                    style="background: rgba(255,255,255,0.02); border-radius: 20px; padding: 2rem; border: 1px solid rgba(96, 165, 250, 0.1); font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--text-muted);">
-                    <div style="color: var(--progenitor); margin-bottom: 1rem;">// RALPH_PROTOCOL_CORE</div>
-                    - [R]ecovery_Matrix: Active<br>
-                    - [A]rchitecture_Sync: Validated<br>
-                    - [L]og_Harvesting: Continuous<br>
-                    - [P]erformance_Gating: enabled<br>
-                    - [H]ealth_Verification: Success
-                </div>
-            </a>
-        </section>
+                </a>
 
-        <section class="evolutions-section">
-            <h2
-                style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.4em; color: var(--text-muted); margin-bottom: 4rem;">
-                [ 01 // SPECIALIZED EVOLUTIONS ]</h2>
-            <div class="evo-grid">
                 <!-- Nanobot -->
-                <a href="https://mk-knight23.github.io/AI-Agent-Nanobot/" class="evo-card" data-reveal>
-                    <svg class="icon-svg" style="color: #f97316;">
-                        <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" />
-                        <path d="M12 7v10" />
-                        <path d="M8 12h8" />
-                    </svg>
-                    <h3>Nanobot</h3>
-                    <span class="gen-status" style="color: #f97316;">FORK: MINIMALIST_LAB</span>
-                    <p style="color: var(--text-muted); margin-top: 1rem;">A lean Python evolution focused on
-                        per-project depth and modular lab automation. The "Researcher" fork.</p>
+                <a href="https://mk-knight23.github.io/AI-Agent-Nanobot/" class="matrix-card" data-reveal style="transition-delay: 0.1s">
+                    <div class="card-header">
+                        <span class="evo-tag">EVO-01</span>
+                        <span class="tech-badge tech-python">Python</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Nanobot</h3>
+                        <span class="card-role">The Lean Researcher</span>
+                        <p class="card-desc">An ultra-lean agent evolution focused on deep per-project synthesis and modular lab automation. The "Scholar" of the matrix.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="use-case">
+                            <div class="use-case-dot"></div>
+                            <span>Deep repository analysis & depth</span>
+                        </div>
+                        <div class="use-case">
+                            <div class="use-case-dot"></div>
+                            <span>Autonomous research automation</span>
+                        </div>
+                    </div>
                 </a>
 
                 <!-- NanoClaw -->
-                <a href="https://mk-knight23.github.io/AI-Agent-NanoClaw/" class="evo-card" data-reveal
-                    style="transition-delay: 0.1s">
-                    <svg class="icon-svg" style="color: #a855f7;">
-                        <path d="M12 2v20" />
-                        <path d="m4.93 4.93 14.14 14.14" />
-                        <path d="M2 12h20" />
-                        <path d="m4.93 19.07 14.14-14.14" />
-                    </svg>
-                    <h3>NanoClaw</h3>
-                    <span class="gen-status" style="color: #a855f7;">FORK: SWARM_COLLECTIVE</span>
-                    <p style="color: var(--text-muted); margin-top: 1rem;">A self-modifying evolution that treats agents
-                        as swarms. Optimized for high-concurrency reasoning.</p>
+                <a href="https://mk-knight23.github.io/AI-Agent-NanoClaw/" class="matrix-card" data-reveal style="transition-delay: 0.2s">
+                    <div class="card-header">
+                        <span class="evo-tag">EVO-02</span>
+                        <span class="tech-badge tech-go">Go</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>NanoClaw</h3>
+                        <span class="card-role">The Swarm Collective</span>
+                        <p class="card-desc">A self-modifying evolution that treats agents as a hive-mind. Optimized for massive parallel reasoning and swarm dynamics.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="use-case">
+                            <div class="use-case-dot"></div>
+                            <span>Concurrent reasoning pipelines</span>
+                        </div>
+                        <div class="use-case">
+                            <div class="use-case-dot"></div>
+                            <span>Dynamic swarm reconfiguration</span>
+                        </div>
+                    </div>
                 </a>
 
                 <!-- PicoClaw -->
-                <a href="https://mk-knight23.github.io/AI-Agent-PicoClaw/" class="evo-card" data-reveal
-                    style="margin-top: 2rem;">
-                    <svg class="icon-svg" style="color: #10b881;">
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                    </svg>
-                    <h3>PicoClaw</h3>
-                    <span class="gen-status" style="color: #10b881;">FORK: EDGE_RUNTIME</span>
-                    <p style="color: var(--text-muted); margin-top: 1rem;">The minimal footprint fork. Designed for
-                        distributed IoT networks and hardware heartbeat monitoring.</p>
+                <a href="https://mk-knight23.github.io/AI-Agent-PicoClaw/" class="matrix-card" data-reveal style="transition-delay: 0.3s">
+                    <div class="card-header">
+                        <span class="evo-tag">EVO-03</span>
+                        <span class="tech-badge tech-go">Go</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>PicoClaw</h3>
+                        <span class="card-role">The Edge Runtime</span>
+                        <p class="card-desc">Designed for the extreme edge. Minimal RAM footprint (<10MB) for distributed IoT clusters and hardware heartbeats.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="use-case">
+                            <div class="use-case-dot"></div>
+                            <span>Low-power hardware monitoring</span>
+                        </div>
+                        <div class="use-case">
+                            <div class="use-case-dot"></div>
+                            <span>Distributed edge intelligence</span>
+                        </div>
+                    </div>
                 </a>
 
                 <!-- ZeroClaw -->
-                <a href="https://mk-knight23.github.io/AI-Agent-ZeroClaw/" class="evo-card" data-reveal
-                    style="transition-delay: 0.1s; margin-top: 2rem;">
-                    <svg class="icon-svg" style="color: #e11d48;">
-                        <path d="m14.5 2 3.5 3.5L10 13l-3.5-3.5L14.5 2z" />
-                        <path d="m20 12-8.5 8.5L8 17l8.5-8.5L20 12z" />
-                        <path d="m6 16-4 4" />
-                    </svg>
-                    <h3>ZeroClaw</h3>
-                    <span class="gen-status" style="color: #e11d48;">FORK: PERFORMANCE_DAEMON</span>
-                    <p style="color: var(--text-muted); margin-top: 1rem;">The Rust evolution. Built for
-                        mission-critical security, identity rotation, and sub-10ms reliability.</p>
+                <a href="https://mk-knight23.github.io/AI-Agent-ZeroClaw/" class="matrix-card" data-reveal style="transition-delay: 0.4s">
+                    <div class="card-header">
+                        <span class="evo-tag">EVO-04</span>
+                        <span class="tech-badge tech-rust">Rust</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>ZeroClaw</h3>
+                        <span class="card-role">The Performance Daemon</span>
+                        <p class="card-desc">The high-security evolution. Built for sub-10ms startup times, identity rotation, and mission-critical reliability.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="use-case">
+                            <div class="use-case-dot"></div>
+                            <span>Secure identity & rotation</span>
+                        </div>
+                        <div class="use-case">
+                            <div class="use-case-dot"></div>
+                            <span>High-performance system daemons</span>
+                        </div>
+                    </div>
                 </a>
-            </div>
-        </section>
-
-        <section class="timeline">
-            <h2 style="font-size: 3rem; margin-bottom: 6rem;">Interactivity Timeline</h2>
-
-            <div class="time-event" data-reveal>
-                <div class="gen-status">T-MINUS 12 MONTHS</div>
-                <h3>The Genesis: OpenClaw</h3>
-                <p style="color: var(--text-muted);">The initial launch of the Command Center for a 60-project
-                    portfolio.</p>
-            </div>
-
-            <div class="time-event" data-reveal style="transition-delay: 0.1s">
-                <div class="gen-status">T-MINUS 8 MONTHS</div>
-                <h3>The Speciation: Nanobot & ZeroClaw</h3>
-                <p style="color: var(--text-muted);">The first splits into Python (Minimalism) and Rust (Performance)
-                    respectively.</p>
-            </div>
-
-            <div class="time-event" data-reveal style="transition-delay: 0.2s">
-                <div class="gen-status">ACTIVE STATE</div>
-                <h3>The Swarm: NanoClaw</h3>
-                <p style="color: var(--text-muted);">Current high-intelligence collective optimized for the Claude Agent
-                    SDK.</p>
             </div>
         </section>
 
         <footer>
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <div>CLAW ECOSYSTEM • SPECIATION V2.2</div>
-                <div style="display: flex; gap: 3rem;">
-                    <a href="#" style="color:var(--text-muted)">GENESIS</a>
-                    <a href="#" style="color:var(--text-muted)">EVOLUTION</a>
-                    <a href="#" style="color:var(--text-muted)">REASONING</a>
-                </div>
+            <div class="footer-logo">AI-CLAW-ECOSYSTEM</div>
+            <div class="footer-links">
+                <a href="#matrix">MATRIX</a>
+                <a href="https://mk-knight23.github.io/AI-Agent-OpenClaw/">GENESIS</a>
+                <a href="https://mk-knight23.github.io/AI-Agent-ZeroClaw/">SECURITY</a>
+                <a href="https://github.com/mk-knight23/AI-CLAW-ECOSYSTEM">GITHUB</a>
+            </div>
+            <div class="copyright">
+                AUTHORIZED BY MK-KNIGHT23 • ECOSYSTEM SPECIATION V2.2 • © 2025
             </div>
         </footer>
     </div>
 
     <script>
+        // Intersection Observer for reveal animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -436,12 +532,13 @@
 
         document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
 
-        // UI-UX Pro Max: Parallax Effect
-        window.addEventListener('scroll', () => {
-            const scroll = window.pageYOffset;
-            document.querySelectorAll('.evo-card').forEach((card, i) => {
-                const speed = 0.05 + (i * 0.02);
-                card.style.transform = `translateY(${-scroll * speed}px)`;
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
     </script>
